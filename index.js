@@ -1,64 +1,85 @@
-//var và const là 2 cách khai báo biến trong js
-//let chỉ có tác dụng trong 1 scope, còn var rộng hơn, có thể khai báo 2 biến trùng tên với var
-//const không thể thay đổi giá trị của biến, còn let thì có thể
+/* write a program asking user their age , and then decide if they
+are old enough to view a 14+ content */
 
-//boolean là 1 kiểu dữ liệu  trong js, chỉ có 2 giá trị true hoặc false
+let age = prompt('how old are you?');
+if (age >= 14) alert('Enjoy!');
+else alert('You are not old enough to view this content');
 
-//Write a program to print out 6 numbers, starting from 0 (no user input)
+/*Write a program asking user to enter a number, x, then check if x is in the lower half or
+higher half of 0 - 9 range */
 
+let x = prompt('Enter a number');
+if (x < 4.5) alert ('Lower  half of 9');
+else alert ('Higher half of 9');
+
+/*Write a program asking user to enter two numbers, x and n, then check if x is in lower
+half or higher half of n */
+
+x = prompt('x = ');
+let n = prompt('n = ');
+if (x < n/2) alert (`${x} is lower  half of ${n}`);
+if (x> n/2) alert (`${x} is higher  half of ${n}`);
+if (x == n/2) alert (`${x} = ${n}/2`);
+
+//Write a script to check if a number is even (divisible by 2) or odd number
+x = prompt ('x = ');
+if (x%2 == 0) alert(`${x} is an even number`);
+else alert(`${x} is an odd number`);
+
+
+//Write a program to print out 6 L’s and H’s, half L’s, half H’s
 let i = 0;
-while(i < 7) {
-    console.log(i);
+while(i < 3) {
+    console.log('L');
     i++;
 }
-    
+i = 0;
+while(i < 3) {
+    console.log('H');
+    i++;
+}
 
-//n numbers, starting from 0, n entered by user
+//n L’s and H’s in total, n entered by user
 
-let n = Number(prompt('Enter a number'));
- i = 0;
+n = prompt('Enter total number');
+x = Math.floor(Math.random() * n);
+i = 0;
+while (i < x) {
+    console.log('L');
+    i++;
+}
+i = 0;
+while (i < (n-x)) {
+    console.log('H');
+    i++;
+}
+
+//8 1’s and 0’s in total, consecutively
+i = 0;
+while(i < 8) {
+    console.log(0);
+    console.log(1);
+    i++;
+}
+
+//n 1’s and 0’s in total, consecutively, n entered by user
+n = prompt('n = ');
+i = 0;
 while(i < n) {
-    console.log(i);
+    console.log(0);
+    console.log(1);
     i++;
 }
 
-//A sequence of numbers, starting from 3, ending before n, n entered by user
-
-i = 3;
-n = Number(prompt('n = '));
-while(i < n) {
-    console.log(i);
-    i++;
-}
-
-//A sequence of numbers, starting from c, ending before n, c and n entered by user
-
-let c = Number(prompt('c = '));
-n = Number(prompt('n = '));
-while (c < n) {
-    console.log(c);
-    c++;
-}
-
-//A sequence of numbers, starting from c, ending before n, stepping by 3, c and n entered by user
-
-
-c = Number(prompt('c = '));
-n = Number(prompt('n = '));
-while (c < n) {
-    console.log(c);
-    c += 3;
-}
-
-/*A sequence of numbers, starting from c, ending before n, stepping by s. c, n and
-s entered by user */
-
-c = Number(prompt('c = '));
-n = Number(prompt('n = '));
-s = Number(prompt('s = '));
-while (c < n) {
-    console.log(c);
-    c += s;
-}
+//Write a script to calculate the BMI (Body Mass Index) of a person,
+let weight = prompt('Your weight?');
+let height = prompt('Your height?');
+let bmi = weight/height/height;
+alert(`Your BMI is ${bmi}`)
+if(bmi < 16) alert('You are Severely underweight');
+if(16 <= bmi && bmi < 18.5  ) alert ('You are Underweight');
+if(18.5 <= bmi && bmi <25) alert ('You are Nomal');
+if(25 <= bmi && bmi < 30) alert ('You are Overweight');
+if( bmi >=30) alert ('You are Obese');
 
 
