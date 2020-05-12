@@ -126,16 +126,15 @@ for (let i = 0; i < cmds.length; i++){
         for(let j = 0; j < 4; j++){
             fd(cmds[i].width);
             rt(90);
-            home();
         }
+        home();
     }else {
         for(let k = 0; k < 2; k++){
             fd(cmds[i].height);
             rt(90);
             fd(cmds[i].width);
             rt(90);
-            home();
         }
+        home();
     }
 }
-//bai 19
