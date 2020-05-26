@@ -55,4 +55,4 @@ let n = prompt('your name?');
 let w = prompt('your wish?');
 c(n, w);
 
- 
+  

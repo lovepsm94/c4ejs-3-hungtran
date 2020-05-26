@@ -6,3 +6,4 @@ const resultDiv = document.getElementById('result_div');
 upperBtn.addEventListener('click', () => {
     resultDiv.textContent = nameInput.value.toUpperCase();
 });
+ 
