@@ -50,8 +50,7 @@ async function deleteItem(id) {
     showListItems();
     itemInput.value = '';
 }
-
-async function searchItem() {
+function searchItem() {
     itemInput.addEventListener('keydown', async function xx() {
         const items = await getData();
         let x = [];
